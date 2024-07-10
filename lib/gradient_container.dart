@@ -1,14 +1,16 @@
+import 'package:exercicios_curso/dice_roller.dart';
 import 'package:flutter/material.dart';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer(this.cor1, this.cor2, {super.key
-      /*required this.colors método 1*/
-      });
+  const GradientContainer(this.cor1, this.cor2,
+      {super.key /*required this.colors método 1*/});
 
-  void rollDice() {}
+  const GradientContainer.roxo({super.key})
+      : cor1 = Colors.deepPurple,
+        cor2 = Colors.indigo;
 
   final Color cor1;
   final Color cor2;
@@ -23,21 +25,8 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(
-              'assets/images/dice-1.png',
-              width: 200,
-            ),
-            TextButton(
-              onPressed: rollDice,
-              style: TextButton.styleFrom(foregroundColor: Colors.white),
-              child: const Text('Roll Dice!'),
-            ),
-          ],
-        ),
+      child: const Center(
+        child: DiceRoller(),
       ),
     );
   }

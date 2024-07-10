@@ -8,6 +8,18 @@
             "name": "exercicios_curso",
             "request": "launch",
             "type": "dart"
+        },
+        {
+            "name": "exercicios_curso (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "exercicios_curso (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
         }
     ]
 }
